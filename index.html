@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Phi Focus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fafafa;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .updated {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .summary {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem 1.25rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            color: #111;
+        }
+
+        p, li {
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        th {
+            background: #f9fafb;
+            font-weight: 600;
+        }
+
+        code {
+            background: #f3f4f6;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .contact {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e5e5;
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                padding: 1.5rem 1.25rem;
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: 26 July 2026</p>
+
+        <div class="summary">
+            Phi Focus is a fully offline study-time tracker. It does not collect, transmit, or share any personal data. Everything stays on your device.
+        </div>
+
+        <h2>1. Information We Collect</h2>
+        <p><strong>We do not collect any personal information.</strong></p>
+        <p>Phi Focus stores the following data locally on your device to provide its core functionality:</p>
+        <ul>
+            <li>Subject names you create (e.g., "Physics", "Math")</li>
+            <li>Daily time targets you set for subjects</li>
+            <li>Study session records (start time, duration, date, entry method)</li>
+            <li>App preferences (alert sound, vibration, accent colour)</li>
+            <li>Active session state (so the timer survives app restarts)</li>
+        </ul>
+        <p>This data is stored exclusively in a local database on your device. It is never uploaded to any server.</p>
+
+        <h2>2. Data Transmission</h2>
+        <p>Phi Focus has <strong>no internet permission</strong>. It cannot and does not:</p>
+        <ul>
+            <li>Send data to any server, cloud service, or third party</li>
+            <li>Include any analytics, crash reporting, or advertising SDKs</li>
+            <li>Make any network requests of any kind</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>Phi Focus uses <strong>no third-party services</strong> — no Firebase, no analytics providers, no ad networks, no social SDKs. The app has zero external dependencies that communicate over a network.</p>
+
+        <h2>4. Permissions</h2>
+        <p>Phi Focus requests the following Android permissions, all of which operate locally:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>FOREGROUND_SERVICE</code></td>
+                    <td>Keeps the stopwatch/pomodoro timer counting while the app is in the background</td>
+                </tr>
+                <tr>
+                    <td><code>POST_NOTIFICATIONS</code></td>
+                    <td>Shows a notification with timer progress while a session is active</td>
+                </tr>
+                <tr>
+                    <td><code>VIBRATE</code></td>
+                    <td>Vibrates the device when a focus or break period ends (if enabled)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>None of these permissions involve network access, location, camera, microphone, contacts, or any other sensitive data.</p>
+
+        <h2>5. Data Storage &amp; Security</h2>
+        <p>All data is stored locally using Android's Room database and Jetpack DataStore. Data is protected by your device's own security (lock screen, encryption). Since the data never leaves your device, no additional encryption layer is needed.</p>
+
+        <h2>6. Data Retention &amp; Deletion</h2>
+        <p>Your data exists only on your device. You have full control:</p>
+        <ul>
+            <li><strong>Delete individual sessions</strong> from within the app</li>
+            <li><strong>Clear all data</strong> via Android Settings → Apps → Phi Focus → Clear Data</li>
+            <li><strong>Uninstall the app</strong> to permanently remove all stored data</li>
+        </ul>
+        <p>We have no copies of your data and cannot recover it after deletion.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Phi Focus does not collect personal information from anyone, including children under 13. Since no data is transmitted off-device, no special children's data protections are triggered.</p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>If we update this privacy policy, the revised version will be posted on this page with an updated date. Since the app has no network access, policy changes cannot affect data handling without a new app update that you choose to install.</p>
+
+        <div class="contact">
+            <h2>9. Contact</h2>
+            <p>If you have questions about this privacy policy, contact:</p>
+            <p><strong>Aryan Poonia</strong><br>
+            Email: <a href="mailto:aryanpoonia0577@gmail.com">aryanpoonia0577@gmail.com</a></p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Phi Focus. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
