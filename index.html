@@ -133,34 +133,50 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: 26 July 2026</p>
+        <p class="updated">Last updated: 27 July 2026</p>
 
         <div class="summary">
-            Phi Focus is a fully offline study-time tracker. It does not collect, transmit, or share any personal data. Everything stays on your device.
+            Phi Focus is an offline study-time tracker. Your study data — subjects, sessions, to-dos, wallpapers, settings — stays on your device and is never uploaded. During the current <strong>closed testing</strong> period only, the app sends anonymous crash reports and basic app-usage statistics through Google Firebase so bugs can be found and fixed. That reporting can be switched off in Settings at any time, and it will be removed from the app when closed testing ends.
         </div>
 
         <h2>1. Information We Collect</h2>
-        <p><strong>We do not collect any personal information.</strong></p>
-        <p>Phi Focus stores the following data locally on your device to provide its core functionality:</p>
+        <p><strong>We do not collect any personal information, and we never collect your study data.</strong></p>
+        <p>Phi Focus stores the following on your device to provide its core functionality:</p>
         <ul>
             <li>Subject names you create (e.g., "Physics", "Math")</li>
             <li>Daily time targets you set for subjects</li>
             <li>Study session records (start time, duration, date, entry method)</li>
-            <li>App preferences (alert sound, vibration, accent colour)</li>
+            <li>To-dos you create (title, optional notes, optional subject, completion time)</li>
+            <li>Wallpaper images you choose, copied into the app's own private storage</li>
+            <li>App preferences (alert sound, vibration, accent colour, theme, full screen layout)</li>
             <li>Active session state (so the timer survives app restarts)</li>
         </ul>
-        <p>This data is stored exclusively in a local database on your device. It is never uploaded to any server.</p>
+        <p><strong>None of the above is ever uploaded.</strong> It lives in a local database and in the app's private files, and it is not sent to us, to Google, or to anyone else.</p>
+        <p>Separately, during closed testing only, the app sends crash and usage diagnostics that contain none of the above — see section 3.</p>
 
         <h2>2. Data Transmission</h2>
-        <p>Phi Focus has <strong>no internet permission</strong>. It cannot and does not:</p>
+        <p>Phi Focus does not:</p>
         <ul>
-            <li>Send data to any server, cloud service, or third party</li>
-            <li>Include any analytics, crash reporting, or advertising SDKs</li>
-            <li>Make any network requests of any kind</li>
+            <li>Upload your subjects, sessions, to-dos, notes, wallpapers or settings anywhere</li>
+            <li>Use any advertising SDK, ad network or social SDK</li>
+            <li>Sell or share anything with data brokers</li>
+            <li>Require or offer an account, login or cloud sync</li>
         </ul>
+        <p>The app's only network activity is the crash and usage reporting described in section 3, which exists for the closed testing period and can be turned off.</p>
 
-        <h2>3. Third-Party Services</h2>
-        <p>Phi Focus uses <strong>no third-party services</strong> — no Firebase, no analytics providers, no ad networks, no social SDKs. The app has zero external dependencies that communicate over a network.</p>
+        <h2>3. Crash &amp; Usage Reporting (closed testing only)</h2>
+        <p>While Phi Focus is in <strong>closed testing</strong>, it uses two Google Firebase services:</p>
+        <ul>
+            <li><strong>Firebase Crashlytics</strong> — if the app crashes, it sends a crash report: the error and its stack trace, plus the device model, Android version, and app version needed to interpret it.</li>
+            <li><strong>Firebase Analytics</strong> — basic, standard app statistics such as app opens, session length, app version, device model, country, and language. These are Google Analytics for Firebase's own default events; the app defines <strong>no custom events of its own</strong>.</li>
+        </ul>
+        <p><strong>What is never sent:</strong> your subject names, your study sessions and totals, your to-dos and their notes, your wallpapers, or any other content you create in the app. No name, email, phone number, precise location, or contact data is collected. The app does not assign or transmit any identifier that you have given it.</p>
+        <p><strong>Your control.</strong> The first time you open the app it tells you this reporting is active and offers to turn it off immediately. You can also change it at any time in <em>Settings → Crash and usage reporting</em>. When it is off, nothing is collected or sent. Reporting is off until the app has shown you that notice.</p>
+        <p><strong>It is temporary.</strong> This reporting exists only to find and fix bugs during closed testing, and it will be removed from the app when closed testing ends. This policy will be updated at that time.</p>
+        <p>Data handled by Firebase is processed by Google under its own terms — see the <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> page and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Firebase Analytics data is retained according to the project's Google Analytics retention setting, and Crashlytics reports are retained by Google for up to 90 days.</p>
+
+        <h2>3a. Other Third-Party Services</h2>
+        <p>Apart from Firebase Crashlytics and Analytics above, Phi Focus uses <strong>no third-party services</strong> — no ad networks, no social SDKs, no trackers, no other cloud services.</p>
 
         <h2>4. Permissions</h2>
         <p>Phi Focus requests the following Android permissions, all of which operate locally:</p>
@@ -184,12 +200,16 @@
                     <td><code>VIBRATE</code></td>
                     <td>Vibrates the device when a focus or break period ends (if enabled)</td>
                 </tr>
+                <tr>
+                    <td><code>INTERNET</code></td>
+                    <td>Sends the closed-testing crash and usage reports described in section 3, and nothing else. No study data is transmitted.</td>
+                </tr>
             </tbody>
         </table>
-        <p>None of these permissions involve network access, location, camera, microphone, contacts, or any other sensitive data.</p>
+        <p>None of these permissions involve location, camera, microphone, contacts, or any other sensitive data. Choosing a wallpaper uses the Android photo picker, which needs <strong>no storage permission</strong>: you pick one image, the app copies it into its own private storage, and it never gains access to the rest of your gallery.</p>
 
         <h2>5. Data Storage &amp; Security</h2>
-        <p>All data is stored locally using Android's Room database and Jetpack DataStore. Data is protected by your device's own security (lock screen, encryption). Since the data never leaves your device, no additional encryption layer is needed.</p>
+        <p>Your study data is stored locally using Android's Room database and Jetpack DataStore, and wallpapers in the app's private files directory. All of it is protected by your device's own security (lock screen, encryption). Since your study data never leaves the device, no additional encryption layer is needed. The closed-testing crash and usage reports in section 3 are transmitted over HTTPS to Google Firebase and stored there under Google's security practices.</p>
 
         <h2>6. Data Retention &amp; Deletion</h2>
         <p>Your data exists only on your device. You have full control:</p>
@@ -197,14 +217,15 @@
             <li><strong>Delete individual sessions</strong> from within the app</li>
             <li><strong>Clear all data</strong> via Android Settings → Apps → Phi Focus → Clear Data</li>
             <li><strong>Uninstall the app</strong> to permanently remove all stored data</li>
+            <li><strong>Turn off crash and usage reporting</strong> in Settings, which stops all collection immediately</li>
         </ul>
-        <p>We have no copies of your data and cannot recover it after deletion.</p>
+        <p>We have no copies of your study data and cannot recover it after deletion. Crash and usage reports already sent to Firebase are anonymous and cannot be traced back to you or removed individually; you can stop any further reporting at any time using the Settings toggle.</p>
 
         <h2>7. Children's Privacy</h2>
-        <p>Phi Focus does not collect personal information from anyone, including children under 13. Since no data is transmitted off-device, no special children's data protections are triggered.</p>
+        <p>Phi Focus is not directed at children and does not collect personal information from anyone, including children under 13. The closed-testing diagnostics in section 3 contain no personal information and no study content, and they can be switched off.</p>
 
         <h2>8. Changes to This Policy</h2>
-        <p>If we update this privacy policy, the revised version will be posted on this page with an updated date. Since the app has no network access, policy changes cannot affect data handling without a new app update that you choose to install.</p>
+        <p>If we update this privacy policy, the revised version will be posted on this page with an updated date. This page will be updated again when the closed-testing crash and usage reporting is removed from the app.</p>
 
         <div class="contact">
             <h2>9. Contact</h2>
